@@ -6,12 +6,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        
+    <div class="header">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+               <li><a href="#">home</a></li>
+               <li><a href="#">about</a></li>
+               <li><a href="#">clock</a></li>
+               <li><a href="#">calculator</a></li>
+            </ul> 
+        </nav>
     </div>
 
+    <div class="container">
 
+        <h1 id="current-time">12:00:00</h1>
+        <div class="quotes">
+            <p>reminder</p>
+            <h2>even miracles take a little time</h2>
+    </div>
 
+<script>
+    let time = document.getElementById("current-time")
+
+    setInterval(() => {
+        let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+    })
+    
+</script>
 
 </body>
 </html>
